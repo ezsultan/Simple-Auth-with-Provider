@@ -1,11 +1,11 @@
 import 'package:ezcommerce/provider/auth_provider.dart';
 import 'package:ezcommerce/screen/auth/sign_up_screen.dart';
-import 'package:ezcommerce/screen/ui/main_screen.dart';
-import 'package:ezcommerce/screen/ui/profile_page.dart';
+import 'package:ezcommerce/screen/home/main_screen.dart';
+import 'package:ezcommerce/screen/ui/profile_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../screen/auth/sign_in_screen.dart';
-import '../screen/splashscreen.dart';
+import 'screen/ui/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

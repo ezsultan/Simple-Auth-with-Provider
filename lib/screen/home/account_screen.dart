@@ -21,6 +21,42 @@ class AboutScreen extends StatelessWidget {
       }
     }
 
+    // Widget content() {
+    //   return Column(
+    //     children: [
+    //       CustomAboutTile(
+    //         iconUrl: 'assets/User.png',
+    //         title: 'Profile',
+    //         onTap: () {
+    //           Get.toNamed('/profile');
+    //         },
+    //       ),
+    //       CustomAboutTile(
+    //         iconUrl: 'assets/bag.png',
+    //         title: 'Order',
+    //         onTap: () {},
+    //       ),
+    //       CustomAboutTile(
+    //         iconUrl: 'assets/Location.png',
+    //         title: 'Address',
+    //         onTap: () {},
+    //       ),
+    //       CustomAboutTile(
+    //         iconUrl: 'assets/card.png',
+    //         title: 'Payment',
+    //         onTap: () {},
+    //       ),
+    //     ],
+    //   );
+    // }
+
+    // Widget logoutButton() {
+    //   return CustomButton(
+    //     text: 'Logout',
+    //     onPressed: handleLogout,
+    //     color: redColor,
+    //   );
+    // }
     Widget content() {
       return Column(
         children: [
@@ -51,10 +87,17 @@ class AboutScreen extends StatelessWidget {
     }
 
     Widget logoutButton() {
-      return CustomButton(
-        text: 'Logout',
-        onPressed: handleLogout,
-        color: redColor,
+      return Padding(
+        padding: EdgeInsets.only(
+          left: defaultMargin,
+          bottom: defaultMargin,
+          right: defaultMargin,
+        ),
+        child: CustomButton(
+          text: 'Logout',
+          color: redColor,
+          onPressed: handleLogout,
+        ),
       );
     }
 
@@ -68,26 +111,21 @@ class AboutScreen extends StatelessWidget {
           ),
         ),
         bottom: PreferredSize(
-            child: Container(
-              height: 1,
-              color: borderColor,
-            ),
-            preferredSize: const Size.fromHeight(1)),
+          child: Container(
+            height: 1,
+            color: borderColor,
+          ),
+          preferredSize: const Size.fromHeight(1),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: defaultMargin,
-          vertical: 24,
-        ),
-        child: Column(
-          children: [
-            content(),
-            const Spacer(),
-            logoutButton(),
-          ],
-        ),
+      body: Column(
+        children: [
+          content(),
+          const Spacer(),
+          logoutButton(),
+        ],
       ),
     );
   }

@@ -1,7 +1,7 @@
-import 'package:ezcommerce/screen/ui/about_screen.dart';
-import 'package:ezcommerce/screen/ui/cart_screen.dart';
-import 'package:ezcommerce/screen/ui/home_screen.dart';
-import 'package:ezcommerce/screen/ui/product_screen.dart';
+import 'package:ezcommerce/screen/home/account_screen.dart';
+import 'package:ezcommerce/screen/home/cart_screen.dart';
+import 'package:ezcommerce/screen/home/home_screen.dart';
+import 'package:ezcommerce/screen/home/product_screen.dart';
 import 'package:ezcommerce/shared/theme.dart';
 import 'package:flutter/material.dart';
 

@@ -14,32 +14,42 @@ class CustomAboutTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 15),
+    return Padding(
+      padding: const EdgeInsets.symmetric(),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+            vertical: 20,
+          ),
+        ),
+        onPressed: onTap,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              width: 24,
-              height: 24,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(iconUrl),
+            Row(
+              children: [
+                Image.asset(
+                  iconUrl,
+                  width: 22,
+                  color: primaryColor,
                 ),
-              ),
-            ),
-            const SizedBox(width: 15),
-            Text(
-              title,
-              style: blackTextstyle.copyWith(
-                fontWeight: bold,
-              ),
+                const SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  title,
+                  style: greyTextstyle.copyWith(
+                    fontSize: 12,
+                    fontWeight: bold,
+                  ),
+                ),
+              ],
             ),
             Icon(
-              Icons.chevron_right,
+              Icons.chevron_right_outlined,
               color: greyColor,
-            )
+            ),
           ],
         ),
       ),
